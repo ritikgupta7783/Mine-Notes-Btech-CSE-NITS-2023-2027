@@ -1,48 +1,55 @@
-# C++ Object-Oriented Programming — Deep-Dive Notes
+# C++ OOP — Beginner-to-Interview Course
 
-A beginner-friendly but placement-level C++ OOP handbook for semester exams, viva, technical interviews and online assessments. The notes are written in small steps: concept → example → output → practical implementation → interview revision.
+Welcome! This course is written for learners who want to understand C++ Object-Oriented Programming from the beginning, using simple English, small examples, visible outputs, guided exercises and complete projects.
 
-## How the code is displayed
-Examples use Markdown code fences labelled `cpp`. GitHub syntax-highlights these C++ blocks; VS Code will also colour them when opened as Markdown. Output is shown separately so you can compare your program's result.
+**Start here:** [Unit 0 — C++ Preparation and Basic Revision](Unit-00-Preparation-and-Basic-Cpp-Revision/README.md)
 
-## Chapter roadmap
-1. [Foundations of OOP](01-Foundations/README.md)
-2. [Classes and Objects](02-Classes-and-Objects/README.md)
-3. [Constructors and Destructors](03-Constructors-and-Destructors/README.md)
-4. [Encapsulation and Abstraction](04-Encapsulation-and-Abstraction/README.md)
-5. [Inheritance](05-Inheritance/README.md)
-6. [Polymorphism](06-Polymorphism/README.md)
-7. [Operator Overloading](07-Operator-Overloading/README.md)
-8. [Memory, Copying and Object Lifetime](08-Memory-and-Object-Lifetime/README.md)
-9. [Exception Handling](09-Exception-Handling/README.md)
-10. [Templates and STL](10-Templates-and-STL/README.md)
-11. [Advanced OOP and Design Principles](11-Advanced-Concepts/README.md)
-12. [Interview and OA Practice](12-Interview-and-OA/README.md)
-13. [Quick Revision Sheet](QUICK-REVISION.md)
+## Recommended learning path
 
-## Compile and run
-Save an example as `main.cpp`, then run:
+| Unit | What you will learn | Lesson |
+|---|---|---|
+| 0 | Minimum C++ needed before OOP | [Start](Unit-00-Preparation-and-Basic-Cpp-Revision/README.md) |
+| 1 | Why OOP is useful | [Open](Unit-01-Why-Do-We-Need-OOP/README.md) |
+| 2 | Classes and objects | [Open](Unit-02-Classes-and-Objects/README.md) |
+| 3 | Functions inside classes | [Open](Unit-03-Functions-Inside-Classes/README.md) |
+| 4 | public, private and protected | [Open](Unit-04-Access-Specifiers/README.md) |
+| 5 | Constructors and initialization | [Open](Unit-05-Constructors-and-Object-Initialization/README.md) |
+| 6 | Encapsulation and valid object state | [Open](Unit-06-Encapsulation/README.md) |
+| 7 | Abstraction and interfaces | [Open](Unit-07-Abstraction/README.md) |
+| 8 | Inheritance and object relationships | [Open](Unit-08-Inheritance/README.md) |
+| 9 | Polymorphism and virtual functions | [Open](Unit-09-Polymorphism/README.md) |
+| 10 | this, static, relationships, RAII, exceptions, templates, namespaces, files | [Open](Unit-10-Additional-OOP-Concepts/README.md) |
+| 11 | Eight practical projects | [Open](Unit-11-Practical-Projects/README.md) |
+| 12 | Interview Q&A, output tracing, debugging and OA practice | [Open](Unit-12-Revision-and-Interview-Prep/README.md) |
 
-```bash
-g++ -std=c++17 -Wall -Wextra -pedantic main.cpp -o main
-./main
-```
+## How to use this course
 
-On Windows PowerShell, run `.` + `\main.exe` after compilation with MinGW g++.
+1. Follow the unit numbers in order, even if you have seen some terms before.
+2. Read why a concept is needed before memorising its syntax.
+3. Try to predict output before reading the output section.
+4. Type the code in a file and compile it. Do not only copy and paste.
+5. Attempt the exercises before reading the answer section.
+6. Build the projects gradually and test edge cases.
 
-## How to study a chapter
-1. Read the concept explanation before reading the code.
-2. Predict the output before revealing it.
-3. Type and compile the example; do not only copy it.
-4. Attempt the practical challenge before reading its worked solution.
-5. Finish with the questions at the end. Explain the reason, not just the definition.
+## Compiler and tools
 
-> Accuracy note: the OA sections contain representative practice questions. A question is not attributed to a named company unless a dated, credible source is recorded.
+The examples use **standard C++17** and mostly need only the standard library. Follow [Setup and Run](SETUP-AND-RUN.md) to compile examples on Windows, Linux or macOS. Use [Troubleshooting](TROUBLESHOOTING.md) if compilation fails.
 
-## Reference links
-- [cppreference — Classes](https://en.cppreference.com/w/cpp/language/classes)
-- [cppreference — Inheritance](https://en.cppreference.com/w/cpp/language/derived_class)
-- [cppreference — Virtual functions](https://en.cppreference.com/w/cpp/language/virtual)
-- [cppreference — Constructors](https://en.cppreference.com/w/cpp/language/constructor)
-- [cppreference — Exceptions](https://en.cppreference.com/w/cpp/language/exceptions)
-- [cppreference — Templates](https://en.cppreference.com/w/cpp/language/templates)
+GitHub displays syntax-coloured C++ when a Markdown fence is labelled cpp. VS Code can colour standalone .cpp files and its Markdown Preview can display labelled examples.
+
+## Learning support
+- [Progress checklist](PROGRESS-CHECKLIST.md)
+- [Glossary of terms](GLOSSARY.md)
+- [Troubleshooting common errors](TROUBLESHOOTING.md)
+- [Setup and run examples](SETUP-AND-RUN.md)
+- [Quick revision](QUICK-REVISION.md)
+
+## Code rules used here
+- Examples are intended for C++17.
+- A displayed output is the expected result for the corresponding code and stated inputs.
+- Compile-time-error examples are explicitly labelled; they are not presented as runnable programs.
+- Intermediate features such as references, smart pointers, std::move and templates are introduced only after their prerequisites.
+- Company-specific interview attribution is only used when backed by a source/date. Most interview questions are clearly labelled as representative practice.
+
+## Navigation and preserved drafts
+The canonical learning path is the Unit 0–12 sequence above. Earlier topic-draft notes are retained for reference under [Reference Archive](Reference-Archive/README.md); use the numbered learning path first so earlier advanced topics don't interrupt the course.

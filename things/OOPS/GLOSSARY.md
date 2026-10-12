@@ -1,0 +1,37 @@
+# OOP and C++ Glossary
+
+- **Abstraction:** showing a small useful interface and hiding irrelevant internal detail.
+- **Access specifier:** a rule for who may directly access a class member; public, private or protected.
+- **Aggregation:** a whole references parts that can exist independently in the model.
+- **Argument:** a value supplied when a function or constructor is called.
+- **Base class:** a class from which another class derives.
+- **Class:** a user-defined type that groups members and access rules.
+- **Composition:** a whole owns component objects whose lifetime is tied to the whole in the design.
+- **Constructor:** special member function that initializes a new object.
+- **Copy assignment:** operation that updates an already-existing object from another object.
+- **Copy constructor:** creates a new object from an existing object of the same type.
+- **Data member:** a variable declared as part of a class.
+- **Destructor:** special member function called as an object's lifetime ends.
+- **Derived class:** a class that inherits from one or more base classes.
+- **Encapsulation:** group related state/behaviour and control access to protect rules.
+- **Exception:** an object/value thrown to signal exceptional failure.
+- **Friend:** explicit permission for a function or class to access private/protected members.
+- **Function:** a named unit of code that may accept inputs and return a result.
+- **Invariant:** a rule that should remain true for every valid object.
+- **Member function:** function declared as part of a class.
+- **Move constructor:** constructor that may transfer resources from an expiring object.
+- **Object:** an instance of a class/type with a lifetime and state.
+- **Object slicing:** loss of derived-specific state when a derived object is copied into a base object by value.
+- **Overloading:** same function name with distinguishable parameter lists.
+- **Overriding:** derived implementation of an inherited virtual function.
+- **Parameter:** named input declared in a function/constructor definition.
+- **Polymorphism:** one interface/operation can represent several behaviours/types.
+- **Pure virtual function:** virtual function declared with = 0.
+- **RAII:** resource ownership tied to object lifetime for automatic cleanup.
+- **Reference:** an alias to an existing object; a reference does not itself own the object.
+- **Scope resolution operator (::):** operator used to qualify a name with its class or namespace.
+- **Smart pointer:** class that represents ownership of a dynamically allocated object.
+- **Static member:** class-level member shared rather than stored separately in every object.
+- **Template:** compile-time recipe for generic function/class code.
+- **this pointer:** pointer to the object associated with a non-static member-function call.
+- **Virtual function:** member function that supports runtime dispatch through base pointers/references.
