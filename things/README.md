@@ -4,6 +4,7 @@ Computer Science notes, semester materials, and placement preparation.
 
 ## Start here
 - [C++ OOP Beginner-to-Interview Course](OOPS/README.md)
+- [Machine Learning — Beginner-to-Intermediate Course](Machine-Learning/README.md)
 - [C++ notes](CPP/README.md)
 - [DSA notes](DSA/README.md)
 - [Placement preparation](Placement-Preparation/README.md)
