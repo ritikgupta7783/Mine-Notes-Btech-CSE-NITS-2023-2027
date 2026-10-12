@@ -1,61 +1,152 @@
+````
 # 01 — OOP Foundations
 
 ## What is OOP?
-Object-oriented programming organizes a program around objects: entities that combine **state** (data) and **behaviour** (operations). In C++, a class defines a user-defined type and an object is an instance of that type. Example: a bank account has a balance and operations such as deposit and withdraw.
 
-OOP is an organizational approach, not a guarantee of good design. C++ is multi-paradigm and also supports procedural, generic and functional styles.
+OOP stands for **Object-Oriented Programming**. It is a programming approach that organizes code around **classes and objects**.
 
-## The four pillars
-- **Encapsulation:** group related data and operations, controlling access so an object can preserve its invariants.
-- **Abstraction:** expose a useful interface while hiding implementation details irrelevant to the caller.
-- **Inheritance:** derive a type from another type; public inheritance is appropriate when derived objects can honour the base type's contract.
-- **Polymorphism:** use one interface with different behaviours. Templates/overloads are common compile-time mechanisms; virtual functions enable runtime dispatch.
+An object combines two things:
 
-## Procedural vs object-oriented programming
-| Procedural | OOP |
-|---|---|
-| Organizes logic around functions | Organizes related state and behaviour around types/objects |
-| Data often passes among functions | State can be protected behind operations |
-| Reuse through functions/modules | Reuse through composition, templates, and sometimes inheritance |
-| Good for simple transformations too | Useful for domain entities with state and behaviour |
+- **State:** Data or properties of an object.
+- **Behaviour:** Operations or functions an object can perform.
 
-Neither paradigm is universally best.
+For example, a bank account has a balance as its state and operations such as deposit and withdraw as its behaviour.
 
-## Example
+C++ supports OOP, but it is a **multi-paradigm programming language** because it also supports procedural and generic programming.
+
+## Class and Object
+
+**Class:** A user-defined type that groups related data members and member functions.
+
+**Object:** An instance of a class.
+
+Think of a class as a blueprint and an object as something created using that blueprint.
+
+### Code Example
+
 ```cpp
 #include <iostream>
 #include <string>
-#include <utility>
-class BankAccount {
-    std::string owner;
-    int balance; // integer minor units in a real currency design
+using namespace std;
+
+class Student {
 public:
-    BankAccount(std::string name, int opening)
-        : owner(std::move(name)), balance(opening >= 0 ? opening : 0) {}
-    void deposit(int amount) { if (amount > 0) balance += amount; }
-    bool withdraw(int amount) {
-        if (amount <= 0 || amount > balance) return false;
-        balance -= amount;
-        return true;
+    string name;
+    int age;
+
+    void display() {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
     }
-    int getBalance() const { return balance; }
 };
+
 int main() {
-    BankAccount a("Asha", 1000);
-    a.deposit(250);
-    a.withdraw(100);
-    std::cout << a.getBalance() << '\\n'; // 1150
+    Student s1;
+
+    s1.name = "Ritik";
+    s1.age = 21;
+
+    s1.display();
+
+    return 0;
 }
+````
+
+### Output
+
 ```
-Balance is not publicly writable; callers use operations that validate requests.
+Name: Ritik
+Age: 21
+```
 
-## Advantages and limitations
-**Advantages:** localizes state and behaviour, supports clear interfaces, makes invariants easier to preserve, and can improve extensibility.
-**Limitations:** excessive classes add indirection; deep inheritance is fragile; dynamic dispatch can add complexity; procedural/data-oriented designs can be simpler for some tasks.
+### Explanation
 
-## Interview/viva
-1. **Is C++ a pure OOP language?** No; it is multi-paradigm.
-2. **Class vs object?** A class defines a type; an object is an instance.
-3. **Encapsulation vs abstraction?** Encapsulation controls access and groups state/behaviour; abstraction presents essential operations and hides implementation details.
-4. **Must every class use inheritance?** No. Prefer composition unless an is-a relationship is genuine.
-5. **What is an invariant?** A condition that must remain true for a valid object.
+- `class Student` defines a class.
+- `s1` is an object of the `Student` class.
+- `name` and `age` are data members.
+- `display()` is a member function.
+- `public` allows these members to be accessed from outside the class.
+
+## The Four Pillars of OOP
+
+The four main pillars of OOP are:
+
+1. Encapsulation: Combining data and related functions into a class while controlling access to the data.
+2. Abstraction: Showing essential operations while hiding implementation details.
+3. Inheritance: Creating a new class from an existing class.
+4. Polymorphism: Allowing the same interface or operation to exhibit different behaviours.
+
+Detailed explanations of these four pillars will be covered in their respective chapters.
+
+## Procedural vs Object-Oriented Programming
+
+| Procedural Programming                    | Object-Oriented Programming                            |
+| ----------------------------------------- | ------------------------------------------------------ |
+| Organizes code mainly around functions    | Organizes code around classes and objects              |
+| Focuses on operations and procedures      | Combines data and related behaviour                    |
+| Data is often passed between functions    | Data can be protected using access control             |
+| Suitable for straightforward computations | Useful for modelling entities with state and behaviour |
+
+Neither approach is universally better; the choice depends on the problem.
+
+## Advantages of OOP
+
+- Modularity: Divides a program into manageable components.
+- Code reuse: Allows existing code to be reused.
+- Maintainability: Makes well-organized programs easier to update.
+- Data protection: Access control helps prevent invalid modifications.
+- Extensibility: Supports adding new functionality through suitable designs.
+
+## Limitations of OOP
+
+- Too many classes can make simple programs unnecessarily complicated.
+- Deep inheritance hierarchies can be difficult to maintain.
+- Objects and abstractions may introduce additional complexity.
+- OOP is not always the simplest choice for every problem.
+
+## Interview Questions and Answers
+
+Q1. What is OOP?
+
+OOP is a programming approach that organizes code around classes and objects, combining data and behaviour.
+
+Q2. Is C++ a pure object-oriented language?
+
+No. C++ is a multi-paradigm language that supports procedural, object-oriented, generic, and other programming styles.
+
+Q3. What is a class?
+
+A class is a user-defined type that groups data members and member functions.
+
+Q4. What is an object?
+
+An object is an instance of a class with its own instance data.
+
+Q5. What is the difference between a class and an object?
+
+A class defines the structure and behaviour, while an object is an instance created from that class.
+
+Q6. What are the four pillars of OOP?
+
+Encapsulation, abstraction, inheritance, and polymorphism.
+
+Q7. What is the difference between procedural programming and OOP?
+
+Procedural programming focuses mainly on functions and operations, whereas OOP organizes related data and behaviour around classes and objects.
+
+Q8. Does every class need inheritance?
+
+No. Inheritance is useful when there is a genuine relationship between types. Many classes work perfectly well without inheritance.
+
+## Quick Revision
+
+- OOP: Organizes programs around classes and objects.
+- Class: A user-defined type.
+- Object: An instance of a class.
+- Data members: Variables declared in a class.
+- Member functions: Functions declared in a class.
+- Four pillars: Encapsulation, abstraction, inheritance, and polymorphism.
+- C++: A multi-paradigm programming language.
+
+```
+```
